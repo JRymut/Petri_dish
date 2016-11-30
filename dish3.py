@@ -7,7 +7,7 @@ class Dish:
     def __init__(self, ticker, width=100, height=100):
         self.ticker, self.width, self.height = ticker, width, height
         self.ticker.dish = self
-        self.fieldList = {}  #slownik laczacy nazwy pol z obiektem pole
+        self.fieldList = {}  
         for x in range(1, self.width+1):
             for y in range(1, self.height+1):
                 self.add_field(x,y)
@@ -260,7 +260,6 @@ class Vir_Meg(Virus):
         self.numerek = numerek
         self.field = None
         self.bac = None
-       # self.infected_act = [[0.1, Bac_Meg.move], [0.3, Bac_Meg.cure]]  nie umiem tego tak zrobic, aby przekazywac dobrze argumenty
         self.interactions = {"Bac_Meg" : self.infect}
                
     def infect(self, bac):
